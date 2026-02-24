@@ -37,7 +37,7 @@ const CoursePanel = () => {
       className="
         w-full bg-[#F5F5F5] pt-36 rounded-tl-3xl rounded-tr-3xl
         h-[320vh] 2xl:h-[320vh] xl:h-[270vh] lg:h-[240vh]
-        md:h-[220vh] sm:h-[180vh] xs:h-[150vh]
+       md:h-[220vh] sm:h-[180vh] xs:h-[170vh]
       "
     >
       <div>
