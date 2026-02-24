@@ -64,16 +64,15 @@ const CoursePanel = () => {
           </div>
           <div className="flex justify-center mt-12">
             <button
-              className="
-                cursor-pointer text-white font-bold tracking-wider
-                text-[1.1rem] 2xl:text-[1.1rem] xl:text-[1.1rem]
-                lg:text-[1rem] md:text-[1rem] sm:text-[.95rem] xs:text-[.9rem]
-                px-10 py-3 xl:px-10 xl:py-3 lg:px-8 lg:py-2.5
-                md:px-6 md:py-2 sm:px-6 sm:py-2 xs:px-4 xs:py-2
-                rounded-xl bg-gradient-to-r from-[#EF5B00] to-[#E04100] text-[#1a1a1a] border-0 border-t border-white/60
-              "
+              className="relative overflow-hidden cursor-pointer text-[1rem] sm:text-[1.1rem] text-white font-bold px-6 py-2 sm:px-10 sm:py-3 rounded-xl bg-gradient-to-r from-[#EF5B00] to-[#E04100] border-0 border-t-1 border-white/60 tracking-wider shadow-md transition-shadow duration-300 hover:shadow-[0_12px_48px_10px_rgba(224,66,0,0.48),0_2px_32px_12px_rgba(16,16,16,0.30)] group h-[2.8em] flex items-center justify-center"
+              style={{ minWidth: '14rem' }}
             >
-              Explore Courses
+              <span className="block absolute left-0 right-0 w-full h-full flex items-center justify-center transition-all duration-300 group-hover:-translate-y-full translate-y-0">
+                Explore Courses
+              </span>
+              <span className="block absolute left-0 right-0 w-full h-full flex items-center justify-center transition-all duration-300 translate-y-full group-hover:translate-y-0">
+                Explore Courses
+              </span>
             </button>
           </div>
         </div>

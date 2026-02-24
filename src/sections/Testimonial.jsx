@@ -10,9 +10,9 @@ const TestimonialCard = React.forwardRef(({ name, position, testimonial, image }
         ref={ref}
         className={`
             testimonial-card
-            w-[30vw] h-[25vh]
+            w-[90vw] h-auto
             sm:w-[80vw] sm:h-auto
-            xs:w-[90vw] xs:h-auto
+            lg:w-[25vw] lg:h-[25vh]
             items-start bg-black flex-shrink-0 flex p-4 transition-transform flex flex-col text-white 
             border-r border-r-[0.5px] border-white/30 rounded-xl border-t border-t-1 border-white/40
             min-w-[250px] max-w-[480px]
@@ -106,8 +106,8 @@ const Testimonial = () => {
                                 HEAR FROM OUR STUDENTS
                             </span>
                         </h1>
-                        <h1 className='text-white text-center text-[2.7rem] xs:text-[1.3rem]'>
-                            We're Here To Help <span className=''> Learner </span> To Become <br className="xs:hidden" /> Industry- Ready Developer
+                        <h1 className='text-center text-[1.2rem] sm:text-[1.6rem] md:text-[2rem] lg:text-[2.7rem] text-white'>
+                            We're Here To Help <span className=''> Learner </span> <br /> To Become <br className="xs:hidden" /> Industry- Ready Developer
                         </h1>
                     </div>
 
