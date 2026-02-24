@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+@font-face {
+    font-family: regular;
+    src: url(../public/fonts/NeueMachina-Regular.otf);
+}
+
+@font-face {
+    font-family: ultraBold;
+    src: url(../public/fonts/NeueMachina-Ultrabold.otf);
+}
+
+@font-face {
+    font-family: normal;
+    src: url(../public/fonts/482a8097102f5f9f-s.p.ttf);
+}
+
+:root {
+    --font-regular: 'regular', sans-serif;
+    --font-ultraBold: 'ultraBold', sans-serif;
+    --font-normal: 'normal', sans-serif;
+    --background-image: url('/images/bg4.jpg');
+}
+
+html,
+body {
+    font-family: var(--font-normal);
+    /* Hide scrollbar for all browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+nav {
+    font-family: var(--font-normal);
+}
+
+.hero {
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
