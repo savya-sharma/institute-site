@@ -1,15 +1,15 @@
 export const companiesLogo = [
     {
         id: 1,
-        img: 'https://i.pinimg.com/1200x/3c/90/2b/3c902beebb869ef2a473817a7a0a8a5e.jpg',
+        img: '/images/cmpImg1.png',
     },
     {
         id: 2,
-        img: 'https://i.pinimg.com/1200x/3c/90/2b/3c902beebb869ef2a473817a7a0a8a5e.jpg',
+        img: '/images/cmpImg2.png',
     },
     {
         id: 3,
-        img: 'https://i.pinimg.com/1200x/3c/90/2b/3c902beebb869ef2a473817a7a0a8a5e.jpg',
+        img: '/images/cmpImg3.png',
     },
     {
         id: 4,

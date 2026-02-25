@@ -3,27 +3,27 @@ import React from 'react';
 // Mobile-first: base classes = phone layout, lg: = laptop layout
 const galleryImages = [
     {
-        src: "https://i.pinimg.com/1200x/c1/c5/77/c1c577c16d2bf406cb203790bdb1a99c.jpg",
+        src: "/images/galImg1.jpg",
         className: "w-full h-[45vw] bg-black rounded-md overflow-hidden lg:w-[22vw] lg:h-[36vh]",
     },
     {
-        src: "https://i.pinimg.com/736x/c5/df/f2/c5dff28b17e01d28c0f5459bccd8f53f.jpg",
+        src: "/images/galImg2.jpg",
         className: "w-full h-[45vw] bg-black rounded-md overflow-hidden lg:w-[26vw] lg:h-[36vh]",
     },
     {
-        src: "https://i.pinimg.com/736x/9d/52/d0/9d52d06bba2024cabdb4ec4956c0688d.jpg",
+        src: "/images/galImg7.jpg",
         className: "w-full h-[55vw] bg-black rounded-md overflow-hidden lg:w-[23vw] lg:h-[74.6vh]",
     },
     {
-        src: "https://i.pinimg.com/1200x/a7/c7/7b/a7c77bbdab58868ab37296da7d679632.jpg",
+        src: "/images/galImg4.jpg",
         className: "w-full h-[45vw] bg-black rounded-md overflow-hidden lg:absolute lg:top-[20rem] lg:left-0 lg:w-[22vw] lg:h-[36vh]",
     },
     {
-        src: "https://i.pinimg.com/736x/a9/a2/f3/a9a2f3487118b187b72e410db0ed07c3.jpg",
+        src: "/images/galImg5.jpg",
         className: "w-full h-[45vw] bg-black rounded-md overflow-hidden lg:absolute lg:top-[20rem] lg:left-[22.6rem] lg:w-[26vw] lg:h-[36vh]",
     },
     {
-        src: "https://i.pinimg.com/1200x/aa/b4/65/aab46530c7face09dedfafbf5dc8de54.jpg",
+        src: "/images/galImg6.png",
         className: "w-full h-[45vw] bg-black rounded-md overflow-hidden lg:absolute lg:-bottom-[27rem] lg:left-0 lg:w-full lg:h-[50vh]",
     },
 ];

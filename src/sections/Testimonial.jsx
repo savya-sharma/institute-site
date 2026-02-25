@@ -91,12 +91,13 @@ const Testimonial = () => {
     return (
         <>
             <section className="
-                w-full min-h-screen pt-[9rem]
-                flex flex-col gap-[6rem] bg-black testimonial-section
-                xs:pt-[4.2rem]
+                w-full lg:min-h-screen
+                pt-[2.5rem] xs:pt-[3rem] sm:pt-[5rem] lg:pt-[9rem]
+                pb-10 lg:pb-0
+                flex flex-col gap-[1.5rem] sm:gap-[3rem] lg:gap-[6rem] bg-black testimonial-section
             ">
                 <div>
-                    <div className='flex flex-col gap-5'>
+                    <div className='flex flex-col gap-2 sm:gap-5'>
                         <h1 className="text-center">
                             <span className="relative text-white/80 border border-[#E04200] bg-[#E04200]/30 px-5 py-[.1rem] inline-block align-baseline">
                                 <span className="absolute top-0 left-0 w-1 h-1 bg-white -translate-x-1/2 -translate-y-1/2"></span>
@@ -107,12 +108,12 @@ const Testimonial = () => {
                             </span>
                         </h1>
                         <h1 className='text-center text-[1.2rem] sm:text-[1.6rem] md:text-[2rem] lg:text-[2.7rem] text-white'>
-                            We're Here To Help <span className=''> Learner </span> <br /> To Become <br className="xs:hidden" /> Industry- Ready Developer
+                            We're Here To Help <span className=''> Learner </span> <br className="hidden sm:block" /> To Become Industry-Ready Developer
                         </h1>
                     </div>
 
                     <div
-                        className="relative overflow-hidden mt-[7rem] w-screen max-w-full xs:mt-10 xs:px-2"
+                        className="relative overflow-hidden mt-[1.5rem] xs:mt-[1.5rem] sm:mt-[4rem] lg:mt-[7rem] w-screen max-w-full"
                     >
                         <div
                             ref={sliderRef}

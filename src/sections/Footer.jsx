@@ -4,12 +4,12 @@ import { AiFillInstagram } from 'react-icons/ai'
 
 const socialLinks = [
     {
-        href: 'https://www.youtube.com/',
+        href: 'https://www.youtube.com/@fullstacklearning',
         label: 'YouTube',
         icon: <FaYoutube />,
     },
     {
-        href: 'https://www.linkedin.com/',
+        href: 'https://www.linkedin.com/company/fullstacklearning/posts/?feedView=all',
         label: 'LinkedIn',
         icon: <FaLinkedin />,
     },
@@ -23,12 +23,12 @@ const socialLinks = [
 const Footer = () => {
     return (
         <>
-            <section className="w-full relative bg-black border-tr-rounded-xl min-h-[60vh] h-[80vh] xs:min-h-[unset] xs:h-auto sm:min-h-[unset] sm:h-auto md:min-h-[unset] md:h-auto lg:min-h-[70vh] lg:h-[95vh]">
+            <section className="w-full relative bg-black h-auto min-h-0 lg:min-h-[70vh] lg:h-[95vh]">
                 <div className='overlay absolute top-0 left-0 right-0 hidden lg:block'>
                     <div className='absolute top-[13rem] right-[10rem] w-[15vw]'><img className='size-full object-cover' src="/images/modelImg-2.png" alt="" /></div>
                     <div className='absolute top-[17rem] left-0 w-[10vw]'><img className='size-full object-cover' src="/images/modelImg-4.png" alt="" /></div>
                 </div>
-                <div className="text-white pt-[4rem] xs:pt-6 sm:pt-8 md:pt-10 lg:pt-[7rem] px-2">
+                <div className="text-white pt-6 sm:pt-8 md:pt-10 lg:pt-[7rem] pb-10 lg:pb-0 px-2">
                     {/* Hide heading on phone screens (md:hidden = visible only on md and up) */}
                     <h1 className="
                         leading-none flex justify-center text-center whitespace-nowrap
@@ -211,7 +211,7 @@ const Footer = () => {
                                         </a>
                                     </li>
                                     <li className="mt-2 xs:mt-3 xs:text-[.97rem]">
-                                        Address
+                                        A-20, Murtikala Colony Gopalpura Bypass, Tonk Rd, Jaipur, Rajasthan 302018
                                     </li>
                                 </ul>
                             </div>

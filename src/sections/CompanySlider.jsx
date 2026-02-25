@@ -30,17 +30,17 @@ const CompanySlider = () => {
 
     return (
         <section>
-            <div className="overflow-hidden py-10 w-full">
+            <div className="overflow-hidden py-6 sm:py-10 w-full">
                 <div
                     ref={sliderRef}
-                    className="flex items-center gap-10 flex-nowrap w-max will-change-transform"
+                    className="flex items-center gap-5 sm:gap-8 lg:gap-10 flex-nowrap w-max will-change-transform"
                 >
                     {logos.map((company, idx) => (
                         <img
                             key={company.id + '-' + idx}
                             src={company.img}
                             alt={`Company logo ${company.id}`}
-                            className="w-24 h-24 object-contain"
+                            className="w-14 h-14 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
                         />
                     ))}
                 </div>

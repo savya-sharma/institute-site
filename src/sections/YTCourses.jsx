@@ -37,7 +37,7 @@ const YTCourses = () => {
     })
 
     return (
-        <section className='w-full h-[60vh] sm:h-[70vh] md:h-[85vh] lg:h-screen bg-black pt-[3rem] sm:pt-[5rem] md:pt-[7rem] lg:pt-[9rem]'>
+        <section className='w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[85vh] lg:min-h-screen bg-black pt-[2rem] sm:pt-[5rem] md:pt-[7rem] lg:pt-[9rem]'>
             <div className='flex flex-col gap-5 px-4'>
                 <h1 className="text-center">
                     <span className="relative text-white/80 border border-[#E04200] bg-[#E04200]/30 px-5 py-[.1rem] inline-block align-baseline">
