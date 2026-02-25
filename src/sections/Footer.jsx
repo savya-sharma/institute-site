@@ -20,6 +20,8 @@ const socialLinks = [
     },
 ];
 
+const addressLine = "A-20, Murtikala Colony Gopalpura Bypass, Tonk Rd, Jaipur, Rajasthan 302018";
+
 const Footer = () => {
     return (
         <>
@@ -122,8 +124,9 @@ const Footer = () => {
                                     fullstacklearning@.com
                                 </a>
                             </li>
-                            <li className="mt-2 xs:mt-1 xs:text-[.97rem]">
-                                Address
+                            {/* Address is now fully visible on phone/tablet */}
+                            <li className="mt-2 xs:mt-3 xs:text-[.97rem] break-words">
+                                {addressLine}
                             </li>
                         </ul>
                     </div>
@@ -211,7 +214,7 @@ const Footer = () => {
                                         </a>
                                     </li>
                                     <li className="mt-2 xs:mt-3 xs:text-[.97rem]">
-                                        A-20, Murtikala Colony Gopalpura Bypass, Tonk Rd, Jaipur, Rajasthan 302018
+                                        {addressLine}
                                     </li>
                                 </ul>
                             </div>
