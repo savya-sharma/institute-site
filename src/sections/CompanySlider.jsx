@@ -16,7 +16,7 @@ const CompanySlider = () => {
         gsap.set(slider, { x: -sliderWidth }); // Start at left
         tl.to(slider, {
             x: 0,
-            duration: 20,
+            duration: 10,
         });
 
         return () => {

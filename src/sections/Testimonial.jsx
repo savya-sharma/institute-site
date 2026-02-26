@@ -66,7 +66,7 @@ const Testimonial = () => {
         slider.style.width = `${distance * 2 - CARD_GAP}px`;
 
         const tl = gsap.timeline({ repeat: -1, defaults: { ease: "none" } });
-        tl.to(slider, { x: -distance, duration: 50 });
+        tl.to(slider, { x: -distance, duration: 40 });
         tlRef.current = tl;
 
         // Pause/resume on hover handlers

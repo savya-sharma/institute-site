@@ -10,17 +10,17 @@ const teamMembers = [
         img: "https://i.pinimg.com/1200x/17/1c/2e/171c2e93fc23504f3331b335f7fbff4e.jpg",
     },
     {
-        name: "Dheeraj",
+        name: "Dheeraj Jangid",
         title: "CFO & Co-Founder.",
         img: "https://i.pinimg.com/736x/5f/42/09/5f42091b45afa0e15ee7dd760dfd43f3.jpg",
     },
     {
-        name: "Akshat",
+        name: "Akshat Sharma",
         title: "Co-Founder & Director.",
         img: "https://i.pinimg.com/736x/d1/8a/2e/d18a2ed82a1750347e6ef707cee92751.jpg",
     },
     {
-        name: "Dheeraj",
+        name: "Anant Tiwari",
         title: "Head of Student Success",
         img: "https://i.pinimg.com/1200x/2d/cf/d1/2dcfd18ccda2c9a6987d8160911ffbe7.jpg",
     },

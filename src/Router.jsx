@@ -3,6 +3,7 @@ import About from './pages/About.jsx'
 import Hero from './sections/Hero'
 import OutletComponent from './OutletComponent/OutletComponent'
 import Contact from './pages/Contact.jsx'
+import Support from './pages/Support.jsx'
 
 const routes = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const routes = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact />
+            },
+            {
+                path: '/support',
+                element: <Support />
             }
         ],
     },

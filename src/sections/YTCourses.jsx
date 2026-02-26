@@ -2,30 +2,60 @@ import React, { useEffect, useRef } from 'react'
 import { ytCourseData } from '../data/ytcourseData'
 import gsap from 'gsap';
 
-const YTCourseCard = React.forwardRef(({ img, title }, ref) => (
-    <div
+const YTCourseCard = React.forwardRef(({ img, title, link }, ref) => (
+    <a
         ref={ref}
-        className='w-[16rem] h-[3.5rem] xs:w-[17rem] xs:h-[4rem] sm:w-[18rem] sm:h-[5rem] lg:w-[20rem] lg:h-[6rem] border border-white/30 rounded-xl flex flex-row items-center justify-center gap-3 sm:gap-5 bg-[#232323] hover:scale-[1.04] transition-transform duration-200 shadow-md'
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`
+            w-[92vw] h-[5.5rem]
+            xs:w-[95vw] xs:h-[5.5rem]
+            sm:w-[95vw] sm:h-[6.5rem]
+            md:w-[75vw] md:h-[7rem]
+            lg:w-[24rem] lg:h-[8rem]
+            border border-white/30 rounded-xl flex flex-row items-center justify-center 
+            gap-3 sm:gap-5 bg-[#232323] hover:scale-[1.04] transition-transform duration-200 
+            px-2 xs:px-3 shadow-md no-underline
+        `}
+        style={{ textDecoration: "none", maxWidth: "100%" }}
+        tabIndex={0}
+        aria-label={`${title} YouTube Course`}
     >
-        <div className="w-12 h-12 xs:w-16 xs:h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex-shrink-0 flex items-center justify-center bg-[#191919] rounded-xl overflow-hidden">
+        <div className={`
+            w-[6.5rem] h-[4rem]
+            xs:w-16 xs:h-16
+            sm:w-20 sm:h-20
+            md:w-[9rem] md:h-[6rem]
+            lg:w-[10rem] lg:h-24
+            flex-shrink-0 flex items-center justify-center 
+            bg-[#191919] rounded-xl overflow-hidden
+        `}>
             {img ? (
                 <img src={img} alt={title} className='w-full h-full object-cover rounded-xl' />
             ) : (
                 <div className="w-full h-full flex items-center justify-center text-[2rem] text-white/30">YT</div>
             )}
         </div>
-        <h2 className='text-white text-sm xs:text-base sm:text-lg px-2 text-left flex-1'>{title}</h2>
-    </div>
+        <h2 className={`
+            text-white text-xs
+            xs:text-[1rem]
+            sm:text-base
+            md:text-lg
+            px-1 xs:px-2 text-left flex-1
+        `}>{title}</h2>
+    </a>
 ))
 
 const YTCourses = () => {
     const sliderRef = useRef(null);
+    const timelineRef = useRef(null);
 
     useEffect(() => {
         const slider = sliderRef.current;
         if (!slider) return;
 
-        const sliderWidth = slider.scrollWidth / 2; // since we'll double the cards
+        const sliderWidth = slider.scrollWidth / 2;
 
         let tl = gsap.timeline({ repeat: -1, defaults: { ease: "none" } });
         gsap.set(slider, { x: -sliderWidth });
@@ -34,7 +64,25 @@ const YTCourses = () => {
             x: 0,
             duration: 20,
         });
-    })
+        timelineRef.current = tl;
+
+        // Pause/resume handlers
+        const handleMouseEnter = () => {
+            if (timelineRef.current) timelineRef.current.pause();
+        };
+        const handleMouseLeave = () => {
+            if (timelineRef.current) timelineRef.current.resume();
+        };
+
+        slider.addEventListener('mouseenter', handleMouseEnter);
+        slider.addEventListener('mouseleave', handleMouseLeave);
+
+        return () => {
+            tl.kill();
+            slider.removeEventListener('mouseenter', handleMouseEnter);
+            slider.removeEventListener('mouseleave', handleMouseLeave);
+        }
+    }, []);
 
     return (
         <section className='w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-[85vh] lg:min-h-screen bg-black pt-[2rem] sm:pt-[5rem] md:pt-[7rem] lg:pt-[9rem]'>
@@ -53,9 +101,12 @@ const YTCourses = () => {
                 </h1>
             </div>
             <div className='overflow-hidden pt-[2rem] sm:pt-[3rem] md:pt-[5rem] lg:pt-[7rem]'>
-                <div ref={sliderRef} className="flex items-center gap-6 sm:gap-8 lg:gap-10 flex-nowrap w-max will-change-transform">
+                <div
+                    ref={sliderRef}
+                    className="flex items-center gap-6 sm:gap-8 lg:gap-10 flex-nowrap w-max will-change-transform"
+                >
                     {ytCourseData.map(course => (
-                        <YTCourseCard key={course.id} img={course.img} title={course.title} />
+                        <YTCourseCard key={course.id} img={course.img} title={course.title} link={course.link} />
                     ))}
                 </div>
             </div>
